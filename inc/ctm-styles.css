@@ -1,0 +1,481 @@
+/* Custom Tile & Marble, Inc. Stylesheet
+   Incorporates original layout.css colors with modern design elements
+   Uses BEM naming conventions */
+.body {
+    font-family: sans-serif;
+    background-color: #F7F7F7;
+    color: #474747;
+}
+
+/* Header */
+.header {
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .header__container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__container {
+        padding: 0 2rem;
+    }
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+.header__logo-img {
+    height: 100%;
+}
+
+/* Navigation */
+.nav--desktop {
+    display: none;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .nav--desktop {
+        display: flex;
+    }
+}
+
+.nav--mobile {
+    display: none;
+    padding: 0.5rem 0.5rem 0.75rem;
+    gap: 0.25rem;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .nav--mobile {
+        display: none !important;
+    }
+}
+
+.nav__toggle {
+    display: block;
+    color: #386278;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .nav__toggle {
+        display: none;
+    }
+}
+
+.nav__link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #386278;
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: #B97D2D;
+    background-color: #D7D7D7;
+}
+
+.nav__link--active {
+    color: #B97D2D;
+    background-color: #D7D7D7;
+}
+
+.nav--mobile .nav__link {
+    font-size: 1rem;
+}
+
+/* Hero */
+.hero {
+    background-image: url('/images/01.png');
+    background-size: cover;
+    background-position: center;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero__overlay {
+    background-color: rgba(0,0,0,0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 10;
+    color: #FFFFFF;
+}
+
+.hero__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+    .hero__subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Main */
+.main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .main {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .services {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.services__card {
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #D7D7D7;
+}
+
+.services__icon {
+    font-size: 2.25rem;
+    color: #B97D2D;
+    border: 1px solid #D7D7D7;
+    margin-bottom: 1rem;
+}
+
+.services__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.services__description {
+    margin-bottom: 1rem;
+}
+
+.services__link {
+    color: #386278;
+    text-decoration: none;
+}
+
+.services__link:hover {
+    color: #B97D2D;
+    text-decoration: underline;
+}
+
+/* About */
+.about {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about__description {
+    margin-bottom: 1.5rem;
+}
+
+.about__gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .about__gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .about__gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.about__image {
+    width: 125px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+/* CTA */
+.cta {
+    background-image: url('/images/demo/backgrounds/02.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.cta__overlay {
+    background-color: rgba(0,0,0,0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cta__content {
+    position: relative;
+    z-index: 10;
+    color: #FFFFFF;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.cta__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta__description {
+    margin-bottom: 1.5rem;
+}
+
+.cta__button {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #386278;
+    border: 1px solid #386278;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.cta__button:hover {
+    background-color: #B97D2D;
+    border-color: #B97D2D;
+}
+
+/* Footer */
+.footer {
+    background-color: #F7F7F7;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer__container {
+    background-color: #3A6576;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .footer__container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer__container {
+        padding: 0 2rem;
+    }
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F7F7F7;
+}
+
+.footer__subtitle {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #F7F7F7;
+}
+
+.footer__contact {
+    margin-top: 1rem;
+    color: #F7F7F7;
+}
+
+.footer__link {
+    color: #F7F7F7;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #B97D2D;
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer__social-link {
+    color: #474747;
+    background-color: #F7F7F7;
+    width: 2.25rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer__social-link--facebook:hover {
+    background-color: #3B5998;
+    color: #FFFFFF;
+}
+
+.footer__social-link--twitter:hover {
+    background-color: #00ACEE;
+    color: #FFFFFF;
+}
+
+.footer__social-link--dribbble:hover {
+    background-color: #EA4C89;
+    color: #FFFFFF;
+}
+
+.footer__social-link--linkedin:hover {
+    background-color: #0E76A8;
+    color: #FFFFFF;
+}
+
+.footer__social-link--google-plus:hover {
+    background-color: #DB4A39;
+    color: #FFFFFF;
+}
+
+.footer__social-link--vk:hover {
+    background-color: #4E658E;
+    color: #FFFFFF;
+}
+
+.footer__nav {
+    margin-top: 1.5rem;
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__nav-item {
+    margin: 0;
+}
+
+.footer__nav-link {
+    color: #F7F7F7;
+    text-decoration: underline;
+}
+
+.footer__nav-link:hover {
+    color: #B97D2D;
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #F7F7F7;
+}
+
+.footer__credit {
+    font-size: 0.875rem;
+    color: #F7F7F7;
+}
+
+/* Back to Top */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #386278;
+    color: #FFFFFF;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.back-to-top:hover {
+    background-color: #B97D2D;
+}
