@@ -2961,7 +2961,7 @@ body, html {
   font-size: 1rem;
 }
 .hero {
-  background-image: url('/images/01.png');
+  background-image: url('images/01.png');
   background-size: cover;
   background-position: center;
   height: 28rem;
@@ -3095,7 +3095,7 @@ body, html {
   border-radius: 0.25rem;
 }
 .cta {
-  background-image: url('/images/demo/backgrounds/02.png');
+  background-image: url('images/demo/backgrounds/02.png');
   background-size: cover;
   background-position: center;
   padding: 4rem 0;
